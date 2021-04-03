@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            var employeeJson = {
+                "firstName": "Luu",
+                "lastName": "Xuan Dat",
+                "email": "lx.xuandat@gmail.com",
+                "age": 14,
+                "gender": false
+            };
+            $("#result").html("firstName: " + employeeJson.firstName);
+
+            var employeeJsonArr = [
+                {
+                    "firstName": "Luu",
+                    "lastName": "Xuan Dat",
+                    "email": "lx.xuandat@gmail.com",
+                    "age": 14,
+                    "gender": false
+                },
+                {
+                    "firstName": "Luu",
+                    "lastName": "Xuan Vy",
+                    "email": "lx.xuanvy@gmail.com",
+                    "age": 15,
+                    "gender": false
+                }
+            ];
+
+            var resultArr = '';
+            // cach wrapper doi tuong json de chuyen sang doi tuong jquery de su dung vong lap each
+            $.each($(employeeJsonArr), function (index, item) {
+                resultArr += "fullname: " + this.firstName + " " + this.lastName + "<br>";
+            });
+            $('#result-arr').html(resultArr);
+        });
+    </script>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result-arr"></p>
+</body>
+
+</html>

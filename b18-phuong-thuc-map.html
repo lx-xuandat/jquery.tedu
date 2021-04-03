@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .bg-danger {
+            background-color: red;
+        }
+    </style>
+
+    <!-- EX1 -->
+    <script>
+        $(document).ready(function () {
+            var result = [];
+            // phuong thuc map(): tra truc tiep ve mang 
+            console.log($('li').map(function (index, element) {
+                return $(element).text();
+            })
+            )
+
+            alert(
+                $('li').map(function (index, element) {
+                    return $(this).text();
+                })
+                    .get());
+
+            // voi each
+            $('li').each(function (index, element) {
+                result.push($(this).text());
+            });
+            console.log('each: ' + result)
+        });
+    </script>
+
+    <!-- EX2: join voi ki tu, hoac join de them vao danh sach ul,li -->
+    <script>
+        $(document).ready(function () {
+            var result = [];
+            // phuong thuc map(): tra truc tiep ve mang 
+            console.log($('li').map(function (index, element) {
+                return $(element).text();
+            })
+            )
+
+            alert(
+                $('li')
+                    .map(
+                        function (index, element) {
+                            return $(this).text();
+                        }
+                    )
+                    .get()
+                    .join('|')
+            );
+
+            // voi each
+            $('li').each(function (index, element) {
+                result.push($(this).text()) + "|";
+                // can xoa di ki tu | o cuoi cung do du thua
+            });
+            console.log('each: ' + result)
+        });
+    </script>
+</head>
+
+<body>
+    <h3>Gioi thieu phuong thuc map</h3>
+    <p>
+        map() ve co ban giong voi each(), cung dung de lap qua cac phan tu DOM
+        <br>
+        khi ban muon tao mot array hay mot string dua tren cac phan tu DOM thi dung map() tot hon la dung each().
+        <br>
+        Tot hon ve hieu suat va code clean hon
+    </p>
+    <ul>
+        <li>C#</li>
+        <li>PHP</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .bg-danger{
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            var btnAdd = $("#btnAdd");
+            var btnRemove = $("#btnRemove");
+            var btnToggle = $("#btnToggle");
+
+            btnAdd.on('click',function () {
+                $('p').addClass('bg-danger');
+            });
+
+            btnRemove.on('click',function () {
+                $('p').removeClass('bg-danger');
+            });
+
+            btnToggle.on('click',function () {
+                $('p').toggleClass('bg-danger');
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <p>hasClass: return true neu phan tu co chua class duoc chi ra, nguoc lai la false</p>
+    <p>addClass: Them moi 1 hoac nhieu class vao phan tu, add nhieu class dung dau space</p>
+    <p>removeClass: xoa 1 hoac nhieu hoac tat ca class(khong chi ten class)</p>
+    <p>toggleClass: neu phan tu chi dinh se remove, nguoc lai khong co se add</p>
+    <h3>EX: </h3>
+    <button id="btnAdd">Add</button>
+    <button id="btnRemove">Remove</button>
+    <button id="btnToggle">Toggle</button>
+    <p>su dung toggle co loi cho viec chung ta lam cong tac bat tat chuc nang cua website</p>
+</body>
+
+</html>

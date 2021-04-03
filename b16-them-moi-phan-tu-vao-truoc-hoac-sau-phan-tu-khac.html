@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            var btnbefore = $("#btnbefore");
+            btnbefore.on('click', function () {
+                $('p').before("<p>Fullname</p>")
+            });
+
+            var btnafter = $("#btnafter");
+        })
+    </script>
+</head>
+
+<body>
+    <p>$(jqObject).before(content): truoc jQoBJECT LA CONTENT</p>
+    <p>$(jqObject).after(content): sau jqObject se la CONTENT</p>
+
+    <p>insertafter: nguoc lai cua after, tuc before</p>
+    <p>insertbefore: nguoc lai cua before</p>
+
+    <h2>ex: them Fullname vao sao the p</h2>
+    <button id="btnbefore">insert before</button>
+
+    <h2>ex: them Gender vao truoc the p</h2>
+    <button id="btnafter">insert after</button>
+</body>
+
+</html>

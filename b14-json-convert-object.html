@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+           
+            var employeeJsonArr = [
+                {
+                    "firstName": "Luu",
+                    "lastName": "Xuan Dat",
+                    "email": "lx.xuandat@gmail.com",
+                    "age": 14,
+                    "gender": false
+                },
+                {
+                    "firstName": "Luu",
+                    "lastName": "Xuan Vy",
+                    "email": "lx.xuanvy@gmail.com",
+                    "age": 15,
+                    "gender": false
+                }
+            ];
+
+            $('#result').html(JSON.stringify(employeeJsonArr));
+            var content = $('#result').html();
+            var objectJson = JSON.parse(content);
+            console.log(objectJson);
+        });
+    </script>
+</head>
+<body>
+    <h2>Casch chuyen doi kieu du lieu json sang object js va nguoc lai</h2>
+    <p id="result"></p>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            var result = $("#result");
+            var btn1 = $('#append');
+            btn1.on('click',function(){
+                result.prepend("Luu Xuan");
+            });
+
+            var btn2 = $('#prepend');
+            btn2.on('click',function(){
+                result.prepend("Ddatj");
+            });
+
+            var btn3 = $('#html');
+            btn3.on('click',function(){
+                result.html("Ddatj");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>html: thay doi noi dung html cua element</p>
+    <p>prepend: bo xung noi dung vao dau cua element </p>
+    <p>append: bo xung noi dung vao cuoi cua element </p>
+    <button id="append">append</button>
+    <button id="prepend">prepend</button>
+    <button id="html">html</button>
+    <div id="result"></div>
+</body>
+</html>
